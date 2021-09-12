@@ -93,7 +93,6 @@ export default {
     },
 
     addCity(data) {
-      console.log(1111,data, this.popularCities,this.popularCities.some(item => item.name === data.name))
       if (!this.popularCities.some(item => item.name === data.name)) {
         this.popularCities.shift();
         this.popularCities.push({
@@ -118,7 +117,6 @@ export default {
 
       axios.request(options).then(res => {
         this.weather = res.data.data[0];
-        console.log(this, this.weather, res.data.data[0])
       }).catch(err => {
         console.error(err);
       });
