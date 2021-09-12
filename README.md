@@ -18,6 +18,11 @@ Extra:
 • for the popular list higlight the hottest with star icon (highlights are visible after I searched for that city, do not search for them without user interaction)
 • handle API or connection failure with messages or popups or whatever of you choice
 
+
+# Online demo is by limk below
+http://weather.demenkov.pp.ua/
+
+
 ## Project setup
 ```
 npm install

@@ -27,9 +27,7 @@ export default {
     },
     methods: {
         getData: function (data) {
-            let city = data.locality;
-
-            this.$emit('cityselected', city);
+            this.$emit('cityselected', data);
         }
     }
 }

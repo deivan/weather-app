@@ -5,10 +5,10 @@
     >
         <v-card-title>Popular cities</v-card-title>
         <v-card-text>
-            <v-list-item v-for="item in popularCities" :key="item">
+            <v-list-item v-for="item in popularCities" :key="item.name">
                 <v-list-item-content>
                     <v-list-item-title>
-                        <v-btn depressed>{{ item }}</v-btn>
+                        <v-btn depressed @click="showWeather(item)">{{ item.name }}</v-btn>
                     </v-list-item-title>
                 </v-list-item-content>
             </v-list-item>
@@ -18,7 +18,17 @@
 
 <script>
 export default {
-    props: ['popularCities']
+    props: ['popularCities'],
+
+    methods: {
+        showWeather(data) {
+            this.$emit('cityselected', {
+                name: data.name,
+                lat: data.lat,
+                lng: data.lng
+            })
+        }
+    }
 }
 </script>
 
